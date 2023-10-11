@@ -1,0 +1,120 @@
+\documentclass[12pt,english]{article}
+\linespread{1.5}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\pagestyle{empty}
+\setcounter{secnumdepth}{5}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{babel}
+
+\defaultfontfeatures{ Scale=MatchLowercase, Ligatures = TeX }
+\setmainfont{Arial}
+\setsansfont{Arial}
+\setmonofont{Andale Mono}
+\setmathfont{GFSNeohellenicMath.otf}
+\setmathfont[range=up]{Arial}
+\setmathfont[range=it]{Arial Italic}
+\setmathfont[range=bfup]{Arial Bold}
+\setmathfont[range=bfit]{Arial Bold Italic}
+\setmathfont[range=tt]{Andale Mono}
+
+\makeatletter
+%%%%% Textclass specific LaTeX commands.
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+\newlength{\lyxlabelwidth}      % auxiliary length
+
+\@ifundefined{date}{}{\date{}}
+%%%%% User specified LaTeX commands.
+\usepackage{graphicx}    %рисунки
+\usepackage{chngcntr}
+\usepackage{caption}
+\usepackage{subcaption}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}    %графические форматы
+\AtBeginDocument{
+  \def\labelitemi{\(\diamond\)}
+}
+
+\makeatother
+\usepackage{babel}
+
+% ------------------------------------------------------
+\begin{document}
+
+tip surface area od CNTs is near the theoretical limit
+
+\section*{Electronic properties of CNTs}
+% \noindent
+Electronic band structure is determined by symmetry:
+\begin{itemize}
+    \item $\mathrm{n}=\mathrm{m}$ (arm chair): Metal
+    \item $\mathrm{n}-\mathrm{m}=3 \mathrm{j}$ (j non-zero integer): Tiny band-gap semiconductor
+    \item Else: Large band-gap semiconductor.
+\end{itemize}
+
+
+
+\noindent
+Band-gap is determined by the diameter of the tube:
+\begin{itemize}
+    \item For tiny band-gap tube: $\quad E_{g} \propto 1 / R^{2}$
+
+    \item For large band-gap tube: $\quad E_{g} \propto 1 / R$
+
+\end{itemize}
+
+
+
+
+$$
+\begin{array}{l|l}
+\hline \text { Electrical Conductivity } & \text { Metallic or semiconducting } \\
+\hline \text { Electrical Transport } & \text { Ballistic, no scattering } \\
+\hline \text { Energy gap (semicond.) } & \mathrm{E}_{\mathrm{g}}[\mathrm{eV}] \approx 1 / \mathrm{d}[\mathrm{nm}] \\
+\hline \text { Maximum current density } & \sim 10^{10} \mathrm{~A} / \mathrm{cm}^{2} \\
+\hline \text { Maximum strain } & 0.11 \% \\
+\hline \text { Thermal conductivity } & 6000 \mathrm{~W} /(\mathrm{Km}) \\
+\hline \text { Diameter } & 1-100 \mathrm{~nm} \\
+\hline \text { Length } & \text { Up to millimeters } \\
+\hline \text { Gravimetric surface } & >1500 \mathrm{~m}^{2} / \mathrm{g} \\
+\hline \text { E-modulus } & 1000 \mathrm{GPa} \\
+\hline
+\end{array}
+$$
+
+\newpage
+% -------------------------------------------------------
+\section*{Common Applications}
+\begin{itemize}
+    \item Microelectronics
+    \item Touch sensors
+    \item Field Emission (LED, etc)
+    \item Nanoprobes and Sensors
+    \item Conductive plastics, adhesives \& Connectors
+    \item Energy storage
+    \item Catalytic \& biomedical supports
+\end{itemize}
+
+
+
+
+
+
+
+
+% -------------------------------------------------------
+
+\bibliographystyle{ieeetr}
+% \bibliography{lit}
+
+\end{document}
+
+
+

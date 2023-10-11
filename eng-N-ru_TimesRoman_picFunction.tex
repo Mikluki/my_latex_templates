@@ -1,0 +1,79 @@
+\documentclass[a4paper, 12pt]{article}
+\linespread{1.5}
+\usepackage{mathtext}                   % русские буквы в фомулах
+\usepackage[utf8]{inputenc}             % выбор кодировки
+\usepackage[T2A,T1]{fontenc}
+\usepackage[english, russian]{babel}    % русский язык
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}  %установка размеров
+\usepackage{indentfirst}    % красная строка
+\usepackage{amsmath}        % математические формулы
+% \usepackage[LGRgreek]{mathastext}
+\usepackage{amssymb}        % математические символы
+\usepackage{multirow}       % объединение строк в таблице
+\usepackage{graphicx}
+\graphicspath{
+  {pics/}
+}
+\usepackage[font=small,skip=5pt]{caption}
+\renewcommand{\figurename}{Рис.}
+\usepackage{float}
+\usepackage{textcomp}       % типографские знаки
+\usepackage{wrapfig}        % обтекаемые рисунки
+\usepackage{mathrsfs}       % символы
+\usepackage{fancyhdr}       % колонтитулы
+\usepackage{colortbl}       % цветные таблицы
+\usepackage{float}
+\usepackage{cancel}         % перечеркнутый текст
+%% Links
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+% == LISTS FUNCTIONS ==
+\newcommand{\listOn}{\begin{itemize}\setlength\itemsep{0pt}}
+\newcommand{\listOff}{\end{itemize}}
+
+\newcommand{\listNumOn}{\begin{enumerate}\setlength\itemsep{0pt}}
+\newcommand{\listNumOff}{\end{enumerate}}
+
+% == FIGURE FUNCTION ==
+\newcommand{\pic}[5]
+{
+\begin{figure}[#1]
+\begin{center}
+\begin{minipage}{0.95\linewidth}
+    \includegraphics[width=#2\linewidth]{#3}
+    \caption{#4}
+    \label{#5}
+\end{minipage}
+\end{center}
+\end{figure}
+}
+
+% == TITLE ==
+\begin{center}
+    \large
+    \bfseries
+    Отчет по проекту ``Обратное проектирование антенн для терагерцовой оптоэлектроники'' за период 1 июня -- 14 августа \\
+    \normalfont
+    Михаил Лукьянов \\
+\end{center}
+
+
+
+\listOn
+\item $\Gamma$ -- reflection coefficient (коэф отражения)
+\item $Z_L$ -- load impedance (импеданс антенны)
+\item $Z_0$ -- feeder charcteristic impedance (целевой импеданс)
+\item $D(\theta, \phi, f)$ -- directivity (зависимость коэф отражения от углов ($\theta,\ \phi$) и частоты $f$)
+\item $\lambda$ -- длина волны излучения
+\item $\frac{\lambda^2}{4 \pi}$ -- эффективная площадь антенны
+\listOff
+
+\end{document}
