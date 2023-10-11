@@ -7,6 +7,8 @@
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}  %установка размеров
 \usepackage{indentfirst}    % красная строка
+% \setlength{\parindent}{0pt} % \noindent global
+
 \usepackage{amsmath}        % математические формулы
 % \usepackage[LGRgreek]{mathastext}
 \usepackage{amssymb}        % математические символы
@@ -34,7 +36,6 @@
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
 
 \begin{document}
-
 % == LISTS FUNCTIONS ==
 \newcommand{\listOn}{\begin{itemize}\setlength\itemsep{0pt}}
 \newcommand{\listOff}{\end{itemize}}
@@ -43,19 +44,19 @@
 \newcommand{\listNumOff}{\end{enumerate}}
 
 % == FIGURE FUNCTION ==
-\newcommand{\pic}[5]
-{
-\begin{figure}[#1]
-\begin{center}
-\begin{minipage}{0.95\linewidth}
-    \includegraphics[width=#2\linewidth]{#3}
-    \caption{#4}
-    \label{#5}
-\end{minipage}
-\end{center}
-\end{figure}
+\newcommand{\pic}[5]{
+  \begin{figure}[#1]
+    \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[width=#2\linewidth]{#3}
+      % \caption{#4}
+      \label{#5}
+      \centering
+    \end{minipage}
+  \end{figure}
 }
-
+    % \pic{h!}{0.8}{binMatrix_2_poligon}
+    % {title}{f1}
 % == TITLE ==
 \begin{center}
     \large

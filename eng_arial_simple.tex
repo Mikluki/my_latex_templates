@@ -1,33 +1,95 @@
 \documentclass[12pt,english]{article}
 \linespread{1.5}
 \usepackage{helvet}
+\documentclass[12pt,english]{article}
+\linespread{1.5}
+\usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-
-
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
-\usepackage{babel}
-
+% \pagestyle{empty}
 \setcounter{secnumdepth}{5}
-\usepackage{mathastext}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage{chemformula}
-%% GraphicsPackageResourceViewer
-\usepackage{graphicx}
-\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{babel}
 
-%% Custom
+\defaultfontfeatures{Scale=MatchLowercase, Ligatures = TeX}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\setmonofont{Andale Mono}
+
+\setlength{\parindent}{0pt} % \noindent global
+
+%%%%% Textclass specific LaTeX commands.
 % \numberwithin{equation}{section}
 % \numberwithin{figure}{section}
-\usepackage{url}
-\usepackage{hyperref}
+
+%%%%% User specified LaTeX commands.
+\usepackage{graphicx}    %рисунки
+\usepackage{chngcntr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\graphicspath{{./pics/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}    %графические форматы
+
+
+\usepackage{babel}
 
 % ------------------------------------------------------
 \begin{document}
+% == LISTS FUNCTIONS ==
+\newcommand{\listOn}{\begin{itemize}\setlength\itemsep{0pt}}
+\newcommand{\listOff}{\end{itemize}}
+
+\newcommand{\listNumOn}{\begin{enumerate}\setlength\itemsep{0pt}}
+\newcommand{\listNumOff}{\end{enumerate}}
+
+% == FIGURE FUNCTION ==
+\newcommand{\pic}[5]{
+  \begin{figure}[#1]
+    \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[width=#2\linewidth]{#3}
+      % \caption{#4}
+      \label{#5}
+      \centering
+    \end{minipage}
+  \end{figure}
+}
+    % \pic{h!}{0.8}{binMatrix_2_poligon}
+    % {title}{f1}
+% =========================
+% == TITLE ==
+\begin{center}
+    \large
+    \bfseries
+    Watermelon report\\
+    \normalfont
+    Mikhail Lukianov \\
+\end{center}
+
+\section{Weak form}
+
+$$
+\begin{gathered}
+u_t-\sigma \Delta u=0 \\
+%
+\int_{\Omega} v u_t d x^3 -
+\sigma \int_{\Omega} v \Delta u d x^3=0 . \\
+%
+\int_{\Omega} v \Delta u d x^3 =
+\int_{\partial \Omega} v \nabla u \cdot d \mathbf{S}
+%
+- \int_{\Omega} \nabla v \cdot \nabla u d x^3 . \\
+\int_{\Omega} \nabla v \cdot \nabla u d x^3 =
+- \int_{\Omega} v u_t d x^3
+\end{gathered}
+$$
 
 
 % \bibliographystyle{ieeetr}
